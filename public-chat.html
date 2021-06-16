@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./main.css" rel="stylesheet">
+		<title>Document</title>
+	</head>
+	<body>
+		<p class="my-user"><span id="myUser"></span></p>
+		<div id="auth">
+			<div>
+				<label for=login>Email</label>
+				<input placeholder="email" id="email">
+			</div>
+			<br>
+			<div>
+				<label for=password>Password</label>
+				<input placeholder="password" id="password">
+			</div>
+			<br>
+			<button onclick="login()">Login</button>
+		</div>
+		<header>
+			<button class="header--btn create" id="createChat">Open channel</button>
+			<button class="header--btn invite" id="sendReq">Send-Request</button>
+			<button class="header--btn cancel" id="cancelReq">Cancel-Request</button>
+			<button class="header--btn live" id="leaveStream">Leave-stream</button>
+		</header>
+		<div class="container" id="root"></div>
+
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<!-- 		    <div class="modal-header">
+		      <span class="close">&times;</span>
+		      <h2>Модальный заголовок</h2>
+		    </div> -->
+				<span class="close">&times;</span>
+				<div class="modal-body" id="user-request">
+					<p>User want to join to stream</p>
+				</div>
+				<!-- 		    <div class="modal-footer">
+		      <h3>Модальный подвал</h3>
+		    </div> -->
+				<div>
+					<button id="CnfirmTrue" class="button button1">Confirm</button>
+					<button id="CnfirmFalse" class="button button1">Cancel</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.socket.io/4.0.1/socket.io.min.js" integrity="sha384-LzhRnpGmQP+lOvWruF/lgkcqD+WDVt9fU3H4BWmwP5u5LTmkUGafMcpZKNObVMLU" crossorigin="anonymous"></script>
+
+		<!-- <script src="https://cdn.socket.io/3.1.1/socket.io.min.js" integrity="sha384-gDaozqUvc4HTgo8iZjwth73C6dDDeOJsAgpxBcMpZYztUfjHXpzrpdrHRdVp8ySO" crossorigin="anonymous"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+		<script src='./main.js'></script>
+	</body>
+</html>
